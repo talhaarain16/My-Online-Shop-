@@ -4,228 +4,188 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My Online Shop | Premium Fashion</title>
+<title>My Online Shop</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #172033;
+body{
+    background:#f4f7fb;
+    color:#172033;
 }
 
-header {
-  background: linear-gradient(135deg, #101d3d, #1769e0);
-  color: white;
-  padding: 18px 6%;
+header{
+    background:linear-gradient(135deg,#102a5c,#2563eb);
+    color:white;
+    text-align:center;
+    padding:35px 15px;
 }
 
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+header h1{
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
+header p{
+    font-size:18px;
+    opacity:.9;
 }
 
-.search {
-  flex: 1;
-  max-width: 500px;
+nav{
+    background:white;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 3px 15px #0001;
+    position:sticky;
+    top:0;
+    z-index:10;
 }
 
-.search input {
-  width: 100%;
-  padding: 13px 18px;
-  border: none;
-  border-radius: 30px;
-  font-size: 15px;
+nav a{
+    color:#172033;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 14px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+.hero{
+    max-width:1100px;
+    margin:35px auto;
+    background:white;
+    border-radius:25px;
+    padding:55px 20px;
+    text-align:center;
+    box-shadow:0 10px 35px #0001;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.hero h2{
+    font-size:38px;
+    margin-bottom:15px;
 }
 
-.hero {
-  margin: 30px auto;
-  max-width: 1200px;
-  padding: 65px 25px;
-  text-align: center;
-  border-radius: 25px;
-  background: linear-gradient(135deg, #17284f, #2675e8);
-  color: white;
+.hero p{
+    color:#687386;
+    font-size:19px;
+    margin-bottom:30px;
 }
 
-.hero h1 {
-  font-size: 45px;
-  margin-bottom: 15px;
+.btn{
+    display:inline-block;
+    padding:16px 28px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    color:white;
+    margin:6px;
 }
 
-.hero p {
-  font-size: 19px;
-  margin-bottom: 25px;
+.shop{
+    background:#2563eb;
 }
 
-.btn {
-  display: inline-block;
-  background: white;
-  color: #1769e0;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
+.whatsapp{
+    background:#16a34a;
 }
 
-.section {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
+.container{
+    max-width:1100px;
+    margin:50px auto;
+    padding:0 15px;
 }
 
-.section h2 {
-  text-align: center;
-  font-size: 34px;
-  margin-bottom: 30px;
+.title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:30px;
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 
-.card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,.08);
-  transition: .3s;
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px #0001;
+    transition:.3s;
 }
 
-.card:hover {
-  transform: translateY(-6px);
+.card:hover{
+    transform:translateY(-5px);
 }
 
-.card img {
-  width: 100%;
-  height: 330px;
-  object-fit: cover;
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
 }
 
-.info {
-  padding: 20px;
+.info{
+    padding:20px;
 }
 
-.info h3 {
-  margin-bottom: 10px;
+.info h3{
+    font-size:21px;
+    margin-bottom:8px;
 }
 
-.price {
-  color: #1769e0;
-  font-size: 21px;
-  font-weight: bold;
-  margin: 12px 0;
+.price{
+    color:#2563eb;
+    font-size:22px;
+    font-weight:bold;
+    margin:12px 0;
 }
 
-.cart-btn {
-  width: 100%;
-  padding: 13px;
-  border: none;
-  border-radius: 10px;
-  background: #1769e0;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+.order{
+    display:block;
+    text-align:center;
+    background:#16a34a;
+    color:white;
+    padding:13px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.cart {
-  background: white;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.07);
+.contact{
+    background:#102a5c;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    margin-top:60px;
 }
 
-.cart h2 {
-  margin-bottom: 15px;
+.contact h2{
+    margin-bottom:15px;
 }
 
-#cartItems {
-  margin: 15px 0;
+footer{
+    background:#09152d;
+    color:#bbb;
+    text-align:center;
+    padding:20px;
 }
 
-.whatsapp {
-  display: block;
-  text-align: center;
-  background: #18a957;
-  color: white;
-  padding: 16px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-}
+@media(max-width:600px){
+    header h1{
+        font-size:30px;
+    }
 
-.free {
-  color: #159447;
-  font-weight: bold;
-}
+    .hero h2{
+        font-size:29px;
+    }
 
-footer {
-  background: #101d3d;
-  color: white;
-  text-align: center;
-  padding: 35px 20px;
-  margin-top: 60px;
-}
-
-@media (max-width: 800px) {
-  .top {
-    flex-direction: column;
-  }
-
-  .search {
-    width: 100%;
-  }
-
-  nav {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .products {
-    grid-template-columns: 1fr;
-  }
-
-  .card img {
-    height: 360px;
-  }
+    .title{
+        font-size:30px;
+    }
 }
 </style>
 </head>
@@ -233,214 +193,131 @@ footer {
 <body>
 
 <header>
-  <div class="top">
-    <div class="logo">🛍️ My Online Shop</div>
-
-    <div class="search">
-      <input type="text" placeholder="Search products...">
-    </div>
-
-    <div>🛒 Cart</div>
-  </div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#cart">Cart</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <h1>🛍️ My Online Shop</h1>
+    <p>Quality Products • Best Prices • Easy Ordering</p>
 </header>
 
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <section class="hero" id="home">
-  <h1>Premium Fashion Collection</h1>
-  <p>Quality Products • Best Prices • Free Delivery</p>
-  <a href="#products" class="btn">Shop Now →</a>
+    <h2>Welcome to My Online Shop</h2>
+    <p>Discover stylish clothing and footwear at affordable prices.</p>
+
+    <a href="#products" class="btn shop">
+        🛒 Shop Now
+    </a>
+
+    <a href="https://wa.me/923181337165" class="btn whatsapp">
+        💬 Order on WhatsApp
+    </a>
 </section>
 
-<section class="section" id="products">
+<section class="container" id="products">
 
-<h2>Our Premium Collection</h2>
+<h2 class="title">🔥 Our Products</h2>
 
 <div class="products">
 
 <!-- SHIRT 1 -->
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80">
-  <div class="info">
-    <h3>Premium White T-Shirt</h3>
-    <p>Premium casual men's T-shirt.</p>
-    <div class="price">Rs. 1,500</div>
-    <button class="cart-btn" onclick="addToCart('Premium White T-Shirt',1500)">
-      Add to Cart
-    </button>
-  </div>
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80">
+<div class="info">
+<h3>Premium White T-Shirt</h3>
+<p>Comfortable premium quality shirt.</p>
+<div class="price">Rs. 1,500</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Premium%20White%20T-Shirt">
+Order on WhatsApp
+</a>
+</div>
 </div>
 
 <!-- SHIRT 2 -->
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80">
-  <div class="info">
-    <h3>Classic Black T-Shirt</h3>
-    <p>Stylish premium black T-shirt.</p>
-    <div class="price">Rs. 1,800</div>
-    <button class="cart-btn" onclick="addToCart('Classic Black T-Shirt',1800)">
-      Add to Cart
-    </button>
-  </div>
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80">
+<div class="info">
+<h3>Classic Black T-Shirt</h3>
+<p>Stylish everyday men's wear.</p>
+<div class="price">Rs. 1,700</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Classic%20Black%20T-Shirt">
+Order on WhatsApp
+</a>
+</div>
 </div>
 
 <!-- SHIRT 3 -->
 <div class="card">
-  <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=800&q=80">
-  <div class="info">
-    <h3>Premium Olive T-Shirt</h3>
-    <p>Modern everyday fashion.</p>
-    <div class="price">Rs. 1,700</div>
-    <button class="cart-btn" onclick="addToCart('Premium Olive T-Shirt',1700)">
-      Add to Cart
-    </button>
-  </div>
-</div>
-
-<!-- JOGGER 1 -->
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=800&q=80">
-  <div class="info">
-    <h3>Premium Black Joggers</h3>
-    <p>Comfortable stylish joggers.</p>
-    <div class="price">Rs. 2,500</div>
-    <button class="cart-btn" onclick="addToCart('Premium Black Joggers',2500)">
-      Add to Cart
-    </button>
-  </div>
-</div>
-
-<!-- JOGGER 2 -->
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80">
-  <div class="info">
-    <h3>Grey Casual Joggers</h3>
-    <p>Soft and comfortable casual wear.</p>
-    <div class="price">Rs. 2,700</div>
-    <button class="cart-btn" onclick="addToCart('Grey Casual Joggers',2700)">
-      Add to Cart
-    </button>
-  </div>
-</div>
-
-<!-- JOGGER 3 -->
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80">
-  <div class="info">
-    <h3>Premium Casual Joggers</h3>
-    <p>Modern premium fashion style.</p>
-    <div class="price">Rs. 3,000</div>
-    <button class="cart-btn" onclick="addToCart('Premium Casual Joggers',3000)">
-      Add to Cart
-    </button>
-  </div>
-</div>
-
-</div>
-</section>
-
-<section class="cart" id="cart">
-
-<h2>🛒 Your Shopping Cart</h2>
-
-<div id="cartItems">
-  Your cart is empty.
-</div>
-
-<h3 id="total">Total: Rs. 0</h3>
-
-<p class="free">✓ Free Delivery</p>
-
-<a class="whatsapp"
-href="https://wa.me/923181337165?text=Hello%20My%20Online%20Shop,%20I%20want%20to%20place%20an%20order."
-target="_blank">
-📱 Order on WhatsApp
+<img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=800&q=80">
+<div class="info">
+<h3>Premium Casual T-Shirt</h3>
+<p>Modern design and comfortable fit.</p>
+<div class="price">Rs. 1,800</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Premium%20Casual%20T-Shirt">
+Order on WhatsApp
 </a>
+</div>
+</div>
 
+<!-- SHOE 1 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80">
+<div class="info">
+<h3>Sport Running Shoes</h3>
+<p>Lightweight and stylish footwear.</p>
+<div class="price">Rs. 3,500</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Sport%20Running%20Shoes">
+Order on WhatsApp
+</a>
+</div>
+</div>
+
+<!-- SHOE 2 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80">
+<div class="info">
+<h3>Classic Casual Shoes</h3>
+<p>Perfect for daily wear.</p>
+<div class="price">Rs. 3,800</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Classic%20Casual%20Shoes">
+Order on WhatsApp
+</a>
+</div>
+</div>
+
+<!-- SHOE 3 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=800&q=80">
+<div class="info">
+<h3>Premium Sneakers</h3>
+<p>Modern sneakers for a premium look.</p>
+<div class="price">Rs. 4,200</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Premium%20Sneakers">
+Order on WhatsApp
+</a>
+</div>
+</div>
+
+</div>
 </section>
 
-<section class="section" id="contact">
-<h2>Contact Us</h2>
-<p style="text-align:center;font-size:18px;">
-WhatsApp: <strong>03181337165</strong><br>
-Fast Ordering • Free Delivery • Quality Products
-</p>
+<section class="contact" id="contact">
+<h2>📞 Contact Us</h2>
+<p>Order directly through WhatsApp</p>
+
+<br>
+
+<a href="https://wa.me/923181337165"
+class="btn whatsapp">
+💬 WhatsApp: 0318-1337165
+</a>
 </section>
 
-<footer id="contact">
-  <h2>🛍️ My Online Shop</h2>
-  <p>Premium Fashion • Best Prices • Free Delivery</p>
-  <br>
-  <p>© 2026 My Online Shop. All Rights Reserved.</p>
+<footer>
+<p>© 2026 My Online Shop. All Rights Reserved.</p>
 </footer>
 
-<script>
-
-let cart = [];
-let total = 0;
-
-function addToCart(name, price) {
-
-  cart.push({
-    name: name,
-    price: price
-  });
-
-  total += price;
-
-  displayCart();
-}
-
-function displayCart() {
-
-  let cartItems = document.getElementById("cartItems");
-
-  if (cart.length === 0) {
-    cartItems.innerHTML = "Your cart is empty.";
-    return;
-  }
-
-  cartItems.innerHTML = "";
-
-  cart.forEach(function(item, index) {
-
-    let div = document.createElement("div");
-
-    div.style.padding = "10px 0";
-    div.style.borderBottom = "1px solid #ddd";
-
-    div.innerHTML =
-      item.name +
-      " — Rs. " +
-      item.price +
-      ' <button onclick="removeItem(' + index + ')">Remove</button>';
-
-    cartItems.appendChild(div);
-  });
-
-  document.getElementById("total").innerText =
-    "Total: Rs. " + total;
-}
-
-function removeItem(index) {
-
-  total -= cart[index].price;
-
-  cart.splice(index, 1);
-
-  displayCart();
-
-  document.getElementById("total").innerText =
-    "Total: Rs. " + total;
-}
-
-</script>
-
 </body>
-</html>
-    
+</html>    
