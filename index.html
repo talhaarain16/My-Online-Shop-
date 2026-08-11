@@ -1,92 +1,345 @@
-Create a complete premium, high-class fashion e-commerce website in a single index.html file using HTML, CSS and JavaScript.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-IMPORTANT:
-The final website must look like a professional branded online fashion store, NOT like a simple/local HTML page.
+<title>My Online Shop | Quality Products</title>
 
-BRAND:
-Name: "My Online Shop"
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-DESIGN:
-- Premium hero-style homepage
-- Modern navy blue, white and light-gray color theme
-- Professional top announcement bar
-- Premium navigation header with logo, Home, Shop, About, Contact and Cart
-- Large hero banner with a stylish fashion background
-- Hero heading: "Upgrade Your Everyday Style"
-- Subtitle: "Premium Fashion • VIP Prices • Free Delivery"
-- Professional "Shop Now" and "Order on WhatsApp" buttons
-- Modern product cards with large HD product images
-- Beautiful shadows, rounded corners, gradients and smooth hover animations
-- Fully responsive for Android mobile, tablet and desktop
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
 
-PRODUCTS:
-Show exactly 6 products:
-1. Premium White T-Shirt
-2. Premium Black T-Shirt
-3. Premium Olive T-Shirt
-4. Premium Black Joggers
-5. Premium Grey Joggers
-6. Premium Casual Joggers
+header {
+  background: linear-gradient(135deg, #111827, #2563eb);
+  color: white;
+  padding: 22px 15px;
+  text-align: center;
+}
 
-Each product must have:
-- Large attractive product photo
-- Product name
-- ⭐ VIP badge
-- Star rating
-- Original price with discount
-- VIP sale price
-- Add to Cart button
-- Order on WhatsApp button
+header h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
 
-PRICES:
-Use realistic VIP prices around:
-Shirts: Rs. 1,500–2,000
-Joggers: Rs. 2,500–3,500
+header p {
+  opacity: .9;
+}
 
-DELIVERY:
-Show "FREE DELIVERY" prominently.
-Do NOT add any delivery charge.
+nav {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
 
-WHATSAPP:
-WhatsApp number: 03181337165
-Use international format 923181337165 for the WhatsApp URL.
+nav a {
+  color: #172033;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
 
-Every product's WhatsApp button should open WhatsApp with a pre-filled message containing that product's name and price.
+.hero {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 35px 20px;
+  text-align: center;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.08);
+}
 
-CART:
-Create a working JavaScript shopping cart with:
-- Add to Cart
-- Remove product
-- Quantity
-- Total price
-- Free delivery
-- WhatsApp checkout button
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
 
-EXTRA SECTIONS:
-- Why Choose Us
-- Premium Quality
-- Free Delivery
-- Easy WhatsApp Ordering
-- Customer Reviews
-- Newsletter/Contact section
-- Professional footer
+.hero p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
 
-IMAGES:
-Use high-quality fashion product images for all 6 products.
-Images must be large, attractive and clearly visible.
-Do NOT leave blank image boxes.
-Do NOT use broken image links.
-Use reliable image URLs or embedded image assets.
+.shop-btn,
+.whatsapp-btn {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+}
 
-IMPORTANT CODE REQUIREMENTS:
-- Everything must be inside one index.html file.
-- Include all CSS inside <style>.
-- Include all JavaScript inside <script>.
-- No external frameworks.
-- No placeholder text.
-- No unfinished sections.
-- All buttons must work.
-- Mobile-first responsive design.
-- Make it visually similar to a premium commercial fashion website.
-- The final result should look polished and professional enough to show to customers.
-- Return ONLY the complete HTML code.
+.shop-btn {
+  background: #2563eb;
+}
+
+.whatsapp-btn {
+  background: #16a34a;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 25px 0;
+  font-size: 28px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.product {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.product p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 12px;
+}
+
+button {
+  border: none;
+  background: #111827;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+.cart {
+  background: white;
+  margin-top: 30px;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.cart h2 {
+  margin-bottom: 15px;
+}
+
+#cart {
+  padding-left: 20px;
+}
+
+.contact {
+  margin-top: 30px;
+  padding: 35px 20px;
+  background: #111827;
+  color: white;
+  text-align: center;
+  border-radius: 18px;
+}
+
+.contact h2 {
+  margin-bottom: 12px;
+}
+
+.contact p {
+  margin-bottom: 18px;
+}
+
+footer {
+  margin-top: 35px;
+  padding: 25px;
+  text-align: center;
+  background: #0b1120;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+  nav a {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🛍️ My Online Shop</h1>
+  <p>Quality Products • Best Prices • Easy Ordering</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#cart">Cart</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>Welcome to My Online Shop</h2>
+  <p>Discover quality products at affordable prices.</p>
+
+  <a href="#products" class="shop-btn">
+    🛒 Shop Now
+  </a>
+
+  <a
+    href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20place%20an%20order"
+    class="whatsapp-btn"
+    target="_blank">
+    🟢 Order on WhatsApp
+  </a>
+</section>
+
+<div class="container">
+
+<h2 class="section-title" id="products">
+  Our Products
+</h2>
+
+<div class="products">
+
+  <div class="product">
+    <div class="product-icon">👕</div>
+    <h3>Premium Shirt</h3>
+    <p>High-quality and comfortable shirt.</p>
+    <div class="price">Rs. 1,500</div>
+
+    <button onclick="addToCart('Premium Shirt - Rs. 1500')">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product">
+    <div class="product-icon">👟</div>
+    <h3>Premium Shoes</h3>
+    <p>Stylish and comfortable shoes.</p>
+    <div class="price">Rs. 3,000</div>
+
+    <button onclick="addToCart('Premium Shoes - Rs. 3000')">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product">
+    <div class="product-icon">☀️</div>
+    <h3>Solar Panel</h3>
+    <p>Reliable solar panel for your needs.</p>
+    <div class="price">Rs. 25,000</div>
+
+    <button onclick="addToCart('Solar Panel - Rs. 25000')">
+      Add to Cart
+    </button>
+  </div>
+
+</div>
+
+<div class="cart" id="cart">
+  <h2>🛒 Your Cart</h2>
+  <ul id="cartList">
+    <li>Your cart is empty.</li>
+  </ul>
+
+  <br>
+
+  <a
+    href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20a%20product"
+    class="whatsapp-btn"
+    target="_blank">
+    🟢 Order via WhatsApp
+  </a>
+</div>
+
+<div class="contact" id="contact">
+  <h2>📱 Contact Us</h2>
+  <p>For orders and product information, contact us on WhatsApp.</p>
+
+  <a
+    href="https://wa.me/923181337165?text=Hello%20I%20want%20information%20about%20your%20products"
+    class="whatsapp-btn"
+    target="_blank">
+    💬 WhatsApp: 0318-1337165
+  </a>
+</div>
+
+</div>
+
+<footer>
+  <p>© 2026 My Online Shop. All Rights Reserved.</p>
+</footer>
+
+<script>
+function addToCart(item) {
+
+  const cart = document.getElementById("cartList");
+
+  if (cart.children.length === 1 &&
+      cart.children[0].textContent === "Your cart is empty.") {
+    cart.innerHTML = "";
+  }
+
+  const li = document.createElement("li");
+  li.textContent = item;
+  li.style.marginBottom = "8px";
+
+  cart.appendChild(li);
+
+  alert("✅ Product added to cart!");
+}
+</script>
+
+</body>
+</html>
