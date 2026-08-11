@@ -1,83 +1,92 @@
->
-    <p>High-quality and comfortable shirt.</p>
-    <div class="price">Rs. 1,500</div>
+Create a complete premium, high-class fashion e-commerce website in a single index.html file using HTML, CSS and JavaScript.
 
-    <button onclick="addToCart('Premium Shirt - Rs. 1500')">
-      Add to Cart
-    </button>
-  </div>
+IMPORTANT:
+The final website must look like a professional branded online fashion store, NOT like a simple/local HTML page.
 
-  <div class="product">
-    <div class="product-icon">👟</div>
-    <h3>Premium Shoes</h3>
-    <p>Stylish and comfortable shoes.</p>
-    <div class="price">Rs. 3,000</div>
+BRAND:
+Name: "My Online Shop"
 
-    <button onclick="addToCart('Premium Shoes - Rs. 3000')">
-      Add to Cart
-    </button>
-  </div>
+DESIGN:
+- Premium hero-style homepage
+- Modern navy blue, white and light-gray color theme
+- Professional top announcement bar
+- Premium navigation header with logo, Home, Shop, About, Contact and Cart
+- Large hero banner with a stylish fashion background
+- Hero heading: "Upgrade Your Everyday Style"
+- Subtitle: "Premium Fashion • VIP Prices • Free Delivery"
+- Professional "Shop Now" and "Order on WhatsApp" buttons
+- Modern product cards with large HD product images
+- Beautiful shadows, rounded corners, gradients and smooth hover animations
+- Fully responsive for Android mobile, tablet and desktop
 
-  <div class="product">
-    <div class="product-icon">☀️</div>
-    <h3>Solar Panel</h3>
-    <p>Reliable solar panel for your needs.</p>
-    <div class="price">Rs. 25,000</div>
+PRODUCTS:
+Show exactly 6 products:
+1. Premium White T-Shirt
+2. Premium Black T-Shirt
+3. Premium Olive T-Shirt
+4. Premium Black Joggers
+5. Premium Grey Joggers
+6. Premium Casual Joggers
 
-    <button onclick="addToCart('Solar Panel - Rs. 25000')">
-      Add to Cart
-    </button>
-  </div>
+Each product must have:
+- Large attractive product photo
+- Product name
+- ⭐ VIP badge
+- Star rating
+- Original price with discount
+- VIP sale price
+- Add to Cart button
+- Order on WhatsApp button
 
-</div>
+PRICES:
+Use realistic VIP prices around:
+Shirts: Rs. 1,500–2,000
+Joggers: Rs. 2,500–3,500
 
-<div class="cart" id="cart">
-  <h2>🛒 Your Cart</h2>
-  <ul id="cartList">
-    <li>Your cart is empty.</li>
-  </ul>
+DELIVERY:
+Show "FREE DELIVERY" prominently.
+Do NOT add any delivery charge.
 
-  <br>
+WHATSAPP:
+WhatsApp number: 03181337165
+Use international format 923181337165 for the WhatsApp URL.
 
-  <a
-    href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20a%20product"
-    class="whatsapp-btn"
-    target="_blank">
-    🟢 Order via WhatsApp
-  </a>
-</div>
+Every product's WhatsApp button should open WhatsApp with a pre-filled message containing that product's name and price.
 
-<div class="contact" id="contact">
-  <h2>📱 Contact Us</h2>
-  <p>For orders and product information, contact us on WhatsApp.</p>
+CART:
+Create a working JavaScript shopping cart with:
+- Add to Cart
+- Remove product
+- Quantity
+- Total price
+- Free delivery
+- WhatsApp checkout button
 
-  <a
-    href="https://wa.me/923181337165?text=Hello%20I%20want%20information%20about%20your%20products"
-    class="whatsapp-btn"
-    target="_blank">
-    💬 WhatsApp: 0318-1337165
-  </a>
-</div>
+EXTRA SECTIONS:
+- Why Choose Us
+- Premium Quality
+- Free Delivery
+- Easy WhatsApp Ordering
+- Customer Reviews
+- Newsletter/Contact section
+- Professional footer
 
-</div>
+IMAGES:
+Use high-quality fashion product images for all 6 products.
+Images must be large, attractive and clearly visible.
+Do NOT leave blank image boxes.
+Do NOT use broken image links.
+Use reliable image URLs or embedded image assets.
 
-<footer>
-  <p>© 2026 My Online Shop. All Rights Reserved.</p>
-</footer>
-
-<script>
-function addToCart(item) {
-
-  const cart = document.getElementById("cartList");
-
-  if (cart.children.length === 1 &&
-      cart.children[0].textContent === "Your cart is empty.") {
-    cart.innerHTML = "";
-  }
-
-  const li = document.createElement("li");
-  li.textContent = item;
-  li.style.marginBottom = "8px";
-
-  cart.appendChild(li);
-  
+IMPORTANT CODE REQUIREMENTS:
+- Everything must be inside one index.html file.
+- Include all CSS inside <style>.
+- Include all JavaScript inside <script>.
+- No external frameworks.
+- No placeholder text.
+- No unfinished sections.
+- All buttons must work.
+- Mobile-first responsive design.
+- Make it visually similar to a premium commercial fashion website.
+- The final result should look polished and professional enough to show to customers.
+- Return ONLY the complete HTML code.
