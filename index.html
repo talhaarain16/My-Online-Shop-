@@ -3,101 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Online Shop</title>
+
+<title>My Online Shop | Quality Products</title>
 
 <style>
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  color: #222;
+  background: #f4f7fb;
+  color: #172033;
 }
 
 header {
-  background: #111827;
+  background: linear-gradient(135deg, #111827, #2563eb);
   color: white;
-  padding: 20px;
+  padding: 22px 15px;
   text-align: center;
 }
 
 header h1 {
-  margin: 0;
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+header p {
+  opacity: .9;
+}
+
+nav {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+nav a {
+  color: #172033;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 35px 20px;
+  text-align: center;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.08);
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.shop-btn,
+.whatsapp-btn {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.shop-btn {
+  background: #2563eb;
+}
+
+.whatsapp-btn {
+  background: #16a34a;
 }
 
 .container {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 15px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 25px 0;
+  font-size: 28px;
 }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
 }
 
 .product {
   background: white;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 22px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+  transition: .3s;
 }
 
-.product .icon {
-  font-size: 60px;
+.product:hover {
+  transform: translateY(-5px);
 }
 
-.product h2 {
-  margin: 10px 0;
+.product-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.product p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
 .price {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  margin: 15px;
+  color: #2563eb;
+  margin: 12px;
 }
 
 button {
-  background: #16a34a;
-  color: white;
   border: none;
+  background: #111827;
+  color: white;
   padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  font-weight: bold;
 }
 
 button:hover {
-  background: #15803d;
+  background: #2563eb;
 }
 
 .cart {
   background: white;
   margin-top: 30px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
 
 .cart h2 {
-  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 #cart {
   padding-left: 20px;
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
+.contact {
+  margin-top: 30px;
+  padding: 35px 20px;
   background: #111827;
   color: white;
+  text-align: center;
+  border-radius: 18px;
+}
+
+.contact h2 {
+  margin-bottom: 12px;
+}
+
+.contact p {
+  margin-bottom: 18px;
+}
+
+footer {
+  margin-top: 35px;
+  padding: 25px;
+  text-align: center;
+  background: #0b1120;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+  nav a {
+    margin: 0 5px;
+    font-size: 14px;
+  }
 }
 </style>
 </head>
@@ -105,68 +217,127 @@ footer {
 <body>
 
 <header>
-  <h1>🛒 My Online Shop</h1>
-  <p>Quality Products at Great Prices</p>
+  <h1>🛍️ My Online Shop</h1>
+  <p>Quality Products • Best Prices • Easy Ordering</p>
 </header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#cart">Cart</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>Welcome to My Online Shop</h2>
+  <p>Discover quality products at affordable prices.</p>
+
+  <a href="#products" class="shop-btn">
+    🛒 Shop Now
+  </a>
+
+  <a
+    href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20place%20an%20order"
+    class="whatsapp-btn"
+    target="_blank">
+    🟢 Order on WhatsApp
+  </a>
+</section>
 
 <div class="container">
 
-  <h2>Our Products</h2>
+<h2 class="section-title" id="products">
+  Our Products
+</h2>
 
-  <div class="products">
+<div class="products">
 
-    <div class="product">
-      <div class="icon">👕</div>
-      <h2>Shirt</h2>
-      <p>Premium Quality Shirt</p>
-      <div class="price">Rs. 1500</div>
-      <button onclick="addToCart('Shirt - Rs. 1500')">
-        Add to Cart
-      </button>
-    </div>
+  <div class="product">
+    <div class="product-icon">👕</div>
+    <h3>Premium Shirt</h3>
+    <p>High-quality and comfortable shirt.</p>
+    <div class="price">Rs. 1,500</div>
 
-    <div class="product">
-      <div class="icon">👟</div>
-      <h2>Shoes</h2>
-      <p>Comfortable Shoes</p>
-      <div class="price">Rs. 3000</div>
-      <button onclick="addToCart('Shoes - Rs. 3000')">
-        Add to Cart
-      </button>
-    </div>
-
-    <div class="product">
-      <div class="icon">☀️</div>
-      <h2>Solar Panel</h2>
-      <p>High Quality Solar Panel</p>
-      <div class="price">Rs. 25000</div>
-      <button onclick="addToCart('Solar Panel - Rs. 25000')">
-        Add to Cart
-      </button>
-    </div>
-
+    <button onclick="addToCart('Premium Shirt - Rs. 1500')">
+      Add to Cart
+    </button>
   </div>
 
-  <div class="cart">
-    <h2>🛒 Your Cart</h2>
-    <ul id="cart"></ul>
+  <div class="product">
+    <div class="product-icon">👟</div>
+    <h3>Premium Shoes</h3>
+    <p>Stylish and comfortable shoes.</p>
+    <div class="price">Rs. 3,000</div>
+
+    <button onclick="addToCart('Premium Shoes - Rs. 3000')">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product">
+    <div class="product-icon">☀️</div>
+    <h3>Solar Panel</h3>
+    <p>Reliable solar panel for your needs.</p>
+    <div class="price">Rs. 25,000</div>
+
+    <button onclick="addToCart('Solar Panel - Rs. 25000')">
+      Add to Cart
+    </button>
   </div>
 
 </div>
 
+<div class="cart" id="cart">
+  <h2>🛒 Your Cart</h2>
+  <ul id="cartList">
+    <li>Your cart is empty.</li>
+  </ul>
+
+  <br>
+
+  <a
+    href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20a%20product"
+    class="whatsapp-btn"
+    target="_blank">
+    🟢 Order via WhatsApp
+  </a>
+</div>
+
+<div class="contact" id="contact">
+  <h2>📱 Contact Us</h2>
+  <p>For orders and product information, contact us on WhatsApp.</p>
+
+  <a
+    href="https://wa.me/923181337165?text=Hello%20I%20want%20information%20about%20your%20products"
+    class="whatsapp-btn"
+    target="_blank">
+    💬 WhatsApp: 0318-1337165
+  </a>
+</div>
+
+</div>
+
 <footer>
-  <p>© 2026 My Online Shop</p>
+  <p>© 2026 My Online Shop. All Rights Reserved.</p>
 </footer>
 
 <script>
 function addToCart(item) {
-  let cart = document.getElementById("cart");
-  let li = document.createElement("li");
 
+  const cart = document.getElementById("cartList");
+
+  if (cart.children.length === 1 &&
+      cart.children[0].textContent === "Your cart is empty.") {
+    cart.innerHTML = "";
+  }
+
+  const li = document.createElement("li");
   li.textContent = item;
+  li.style.marginBottom = "8px";
+
   cart.appendChild(li);
 
-  alert("Product added to cart!");
+  alert("✅ Product added to cart!");
 }
 </script>
 
