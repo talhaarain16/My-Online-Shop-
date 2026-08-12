@@ -3,919 +3,303 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VIP Men's Fashion | Premium Men's Wear</title>
+<title>VIP Men's Fashion</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-    background:#090909;
-    color:#fff;
+  font-family:Arial,sans-serif;
+  background:#f4f4f4;
+  color:#111;
 }
-
-/* TOP BAR */
-.topbar{
-    background:#050505;
-    border-bottom:1px solid #a77b13;
-    padding:9px 5%;
-    display:flex;
-    justify-content:space-between;
-    font-size:13px;
-    color:#eee;
+header{
+  background:#080808;
+  color:#fff;
+  padding:18px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  position:sticky;
+  top:0;
+  z-index:10;
 }
-
-.gold{
-    color:#e8b62d;
-}
-
-/* NAVBAR */
-.navbar{
-    background:#080808;
-    padding:15px 4%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid #8f6916;
-}
-
 .logo{
-    font-size:27px;
-    font-weight:900;
-    color:#e7b52c;
-    white-space:nowrap;
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 12px;
+  font-size:14px;
+}
+.wa{
+  background:#d4af37;
+  color:#000;
+  padding:11px 18px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.logo span{
-    color:white;
-    font-size:14px;
-    display:block;
-    letter-spacing:2px;
-}
-
-.navlinks{
-    display:flex;
-    gap:25px;
-}
-
-.navlinks a{
-    color:white;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:bold;
-}
-
-.navlinks a:hover{
-    color:#e7b52c;
-}
-
-.whatsapp{
-    background:#e7b52c;
-    color:#080808;
-    padding:12px 18px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:bold;
-    white-space:nowrap;
-}
-
-/* HERO */
 .hero{
-    min-height:500px;
-    display:flex;
-    align-items:center;
-    padding:60px 7%;
-    background:
-    linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1600&q=85")
-    center/cover;
+  min-height:430px;
+  display:flex;
+  align-items:center;
+  padding:50px 7%;
+  color:#fff;
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.2)),
+  url("1000035573.jpg") center/cover;
 }
-
-.hero-content{
-    max-width:600px;
-}
-
-.small-title{
-    color:#e7b52c;
-    letter-spacing:5px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
 .hero h1{
-    font-size:65px;
-    line-height:.95;
-    margin-bottom:20px;
+  font-size:58px;
+  max-width:600px;
+  margin-bottom:15px;
 }
-
-.hero h1 span{
-    color:#e7b52c;
-}
-
 .hero p{
-    font-size:18px;
-    color:#ddd;
-    margin-bottom:28px;
+  font-size:18px;
+  margin-bottom:25px;
 }
-
 .btn{
-    display:inline-block;
-    padding:14px 28px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-right:10px;
-    cursor:pointer;
-    border:none;
+  display:inline-block;
+  background:#d4af37;
+  color:#000;
+  padding:14px 24px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.btn-gold{
-    background:#e7b52c;
-    color:#080808;
-}
-
-.btn-dark{
-    background:#111;
-    color:white;
-    border:1px solid #e7b52c;
-}
-
-/* FEATURES */
-.features{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    background:#0c0c0c;
-    border-bottom:1px solid #7e5c13;
-    border-top:1px solid #7e5c13;
-}
-
-.feature{
-    text-align:center;
-    padding:25px 10px;
-    border-right:1px solid #444;
-}
-
-.feature-icon{
-    font-size:28px;
-    color:#e7b52c;
-    margin-bottom:8px;
-}
-
-.feature h3{
-    font-size:15px;
-}
-
-.feature p{
-    color:#aaa;
-    font-size:12px;
-    margin-top:5px;
-}
-
-/* SECTION */
 .section{
-    padding:55px 4%;
+  padding:55px 5%;
 }
-
-.section-title{
-    text-align:center;
-    margin-bottom:35px;
+.section h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:35px;
 }
-
-.section-title h2{
-    font-size:34px;
-}
-
-.section-title p{
-    color:#e7b52c;
-    margin-top:8px;
-}
-
-/* SEARCH */
-.search-box{
-    max-width:500px;
-    margin:0 auto 30px;
-    display:flex;
-}
-
-.search-box input{
-    width:100%;
-    padding:15px;
-    border-radius:5px 0 0 5px;
-    border:none;
-    outline:none;
-    font-size:15px;
-}
-
-.search-box button{
-    background:#e7b52c;
-    border:none;
-    padding:0 20px;
-    cursor:pointer;
-}
-
-/* FILTERS */
-.filters{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:35px;
-}
-
-.filter{
-    background:#171717;
-    border:1px solid #555;
-    color:white;
-    padding:10px 18px;
-    border-radius:20px;
-    cursor:pointer;
-}
-
-.filter:hover,
-.filter.active{
-    background:#e7b52c;
-    color:#000;
-}
-
-/* PRODUCTS */
 .products{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:18px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
 }
-
-.product{
-    background:#111;
-    border:1px solid #735512;
-    border-radius:8px;
-    overflow:hidden;
-    transition:.3s;
+.card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,.12);
+  transition:.3s;
 }
-
-.product:hover{
-    transform:translateY(-6px);
-    border-color:#e7b52c;
-    box-shadow:0 10px 30px rgba(231,181,44,.15);
+.card:hover{
+  transform:translateY(-6px);
 }
-
-.product-img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
-    display:block;
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
 }
-
-.product-info{
-    padding:15px;
+.info{
+  padding:17px;
 }
-
-.tag{
-    display:inline-block;
-    background:#e7b52c;
-    color:#000;
-    padding:4px 7px;
-    border-radius:3px;
-    font-size:10px;
-    font-weight:bold;
-    margin-bottom:8px;
+.info h3{
+  font-size:17px;
+  margin-bottom:8px;
 }
-
-.product h3{
-    font-size:16px;
-    margin-bottom:7px;
+.info p{
+  color:#777;
+  font-size:14px;
+  margin-bottom:10px;
 }
-
-.product p{
-    color:#aaa;
-    font-size:12px;
-    min-height:32px;
-}
-
 .price{
-    color:#e7b52c;
-    font-size:18px;
-    font-weight:bold;
-    margin:12px 0;
+  color:#b28a00;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:14px;
 }
-
 .order{
-    width:100%;
-    padding:11px;
-    background:#e7b52c;
-    color:#000;
-    border:0;
-    border-radius:4px;
-    font-weight:bold;
-    cursor:pointer;
+  display:block;
+  text-align:center;
+  background:#111;
+  color:#fff;
+  padding:12px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:bold;
 }
-
-.order:hover{
-    background:#fff;
-}
-
-/* CART */
-.cart-section{
-    background:#111;
-    border-top:1px solid #5f4814;
-    border-bottom:1px solid #5f4814;
-}
-
-.cart{
-    max-width:900px;
-    margin:auto;
-}
-
-.cart-item{
-    display:flex;
-    justify-content:space-between;
-    padding:12px;
-    border-bottom:1px solid #333;
-}
-
-.total{
-    text-align:right;
-    padding:20px;
-    font-size:22px;
-    color:#e7b52c;
-    font-weight:bold;
-}
-
-/* TRUST */
-.trust{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1px;
-    background:#555;
-    margin-top:50px;
-}
-
-.trust-box{
-    background:#111;
-    text-align:center;
-    padding:25px;
-}
-
-.trust-box strong{
-    color:#e7b52c;
-    display:block;
-    margin-bottom:6px;
-}
-
-/* FOOTER */
 footer{
-    background:#050505;
-    padding:50px 5% 20px;
-    border-top:1px solid #795a18;
+  background:#080808;
+  color:#fff;
+  text-align:center;
+  padding:30px;
 }
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1.5fr;
-    gap:35px;
-}
-
-footer h2{
-    color:#e7b52c;
-    margin-bottom:15px;
-}
-
-footer h3{
-    margin-bottom:15px;
-}
-
-footer p,
 footer a{
-    color:#aaa;
-    font-size:13px;
-    line-height:2;
-    text-decoration:none;
-    display:block;
+  color:#d4af37;
+  text-decoration:none;
 }
 
-footer a:hover{
-    color:#e7b52c;
+@media(max-width:900px){
+  .products{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:42px}
 }
-
-.social{
-    display:flex;
-    gap:10px;
-    margin-top:15px;
-}
-
-.social a{
-    border:1px solid #555;
-    padding:7px 10px;
-    border-radius:50%;
-}
-
-.copyright{
-    text-align:center;
-    border-top:1px solid #333;
-    margin-top:35px;
-    padding-top:20px;
-    color:#777;
-    font-size:12px;
-}
-
-/* MOBILE */
-@media(max-width:1100px){
-    .products{
-        grid-template-columns:repeat(4,1fr);
-    }
-}
-
-@media(max-width:800px){
-    .topbar{
-        font-size:10px;
-    }
-
-    .navbar{
-        flex-wrap:wrap;
-    }
-
-    .navlinks{
-        order:3;
-        width:100%;
-        justify-content:center;
-        gap:14px;
-    }
-
-    .navlinks a{
-        font-size:12px;
-    }
-
-    .hero{
-        min-height:430px;
-        padding:40px 7%;
-    }
-
-    .hero h1{
-        font-size:46px;
-    }
-
-    .features{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .product-img{
-        height:200px;
-    }
-
-    .trust{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:500px){
-    .logo{
-        font-size:21px;
-    }
-
-    .whatsapp{
-        padding:9px 10px;
-        font-size:11px;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero p{
-        font-size:14px;
-    }
-
-    .btn{
-        padding:12px 15px;
-        font-size:12px;
-    }
-
-    .section{
-        padding:40px 10px;
-    }
-
-    .section-title h2{
-        font-size:27px;
-    }
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .product-img{
-        height:160px;
-    }
-
-    .product-info{
-        padding:10px;
-    }
-
-    .product h3{
-        font-size:13px;
-    }
-
-    .product p{
-        font-size:10px;
-    }
-
-    .price{
-        font-size:15px;
-    }
-
-    .order{
-        font-size:11px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
+@media(max-width:600px){
+  header{flex-wrap:wrap}
+  nav{order:3;width:100%;text-align:center}
+  nav a{margin:0 7px}
+  .products{grid-template-columns:1fr}
+  .hero{min-height:380px}
+  .hero h1{font-size:38px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-    <div>🚚 FREE DELIVERY ALL OVER PAKISTAN</div>
-    <div>✓ 100% ORIGINAL PRODUCTS</div>
-    <div>📱 <span class="gold">0318-1337165</span></div>
+<header>
+  <div class="logo">VIP MEN'S</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="wa"
+     href="https://wa.me/923181337165"
+     target="_blank">
+     WhatsApp
+  </a>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>VIP Men's Fashion</h1>
+    <p>Premium Style • Best Quality • Free Delivery</p>
+    <a class="btn" href="#products">SHOP NOW</a>
+  </div>
+</section>
+
+<section class="section" id="products">
+<h2>Premium Collection</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="1000035573.jpg" alt="Premium Denim Jacket">
+<div class="info">
+<h3>Premium Denim Jacket</h3>
+<p>Premium Men's Fashion</p>
+<div class="price">Rs. 4,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20Denim%20Jacket" target="_blank">ORDER NOW</a>
+</div>
 </div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
+<div class="card">
+<img src="1000035572.jpg" alt="Premium White Shoes">
+<div class="info">
+<h3>Premium White Shoes</h3>
+<p>Classic Men's Footwear</p>
+<div class="price">Rs. 4,499</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20White%20Shoes" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="logo">
-        VIP
-        <span>MEN'S FASHION</span>
-    </div>
+<div class="card">
+<img src="1000035574.jpg" alt="Premium Blue Shirt">
+<div class="info">
+<h3>Premium Blue Shirt</h3>
+<p>Smart Casual Collection</p>
+<div class="price">Rs. 2,499</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20Blue%20Shirt" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="navlinks">
-        <a href="#home">HOME</a>
-        <a href="#products">COLLECTION</a>
-        <a href="#products">T-SHIRTS</a>
-        <a href="#products">JACKETS</a>
-        <a href="#products">SHOES</a>
-        <a href="#products">JOGGERS</a>
-        <a href="#contact">CONTACT</a>
-    </div>
+<div class="card">
+<img src="1000035557.jpg" alt="Black Hoodie">
+<div class="info">
+<h3>Black Premium Hoodie</h3>
+<p>Modern Men's Wear</p>
+<div class="price">Rs. 3,499</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Black%20Premium%20Hoodie" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-    <a class="whatsapp"
-       href="https://wa.me/923181337165"
-       target="_blank">
-       💬 ORDER ON WHATSAPP
-    </a>
+<div class="card">
+<img src="1000035558.jpg" alt="Grey Joggers">
+<div class="info">
+<h3>Grey Premium Joggers</h3>
+<p>Comfort & Street Style</p>
+<div class="price">Rs. 2,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Grey%20Premium%20Joggers" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-</nav>
+<div class="card">
+<img src="1000035559.jpg" alt="Black T Shirt">
+<div class="info">
+<h3>Black Classic T-Shirt</h3>
+<p>Premium Cotton</p>
+<div class="price">Rs. 1,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Black%20Classic%20T-Shirt" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-<!-- HERO -->
-<section class="hero" id="home">
+<div class="card">
+<img src="1000035560.jpg" alt="Denim Jacket">
+<div class="info">
+<h3>Classic Denim Jacket</h3>
+<p>VIP Men's Collection</p>
+<div class="price">Rs. 4,799</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Classic%20Denim%20Jacket" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="hero-content">
+<div class="card">
+<img src="1000035561.jpg" alt="Black Sports Shoes">
+<div class="info">
+<h3>Black Sports Shoes</h3>
+<p>Premium Casual Footwear</p>
+<div class="price">Rs. 4,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Black%20Sports%20Shoes" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-        <div class="small-title">
-            NEW ARRIVALS
-        </div>
+<div class="card">
+<img src="1000035567.jpg" alt="Olive T Shirt">
+<div class="info">
+<h3>Olive Premium T-Shirt</h3>
+<p>Modern Men's Collection</p>
+<div class="price">Rs. 1,899</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Olive%20Premium%20T-Shirt" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-        <h1>
-            VIP MEN'S<br>
-            <span>FASHION</span>
-        </h1>
+<div class="card">
+<img src="1000035555.jpg" alt="Navy Polo Shirt">
+<div class="info">
+<h3>Navy Polo Shirt</h3>
+<p>Smart Premium Wear</p>
+<div class="price">Rs. 2,299</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Navy%20Polo%20Shirt" target="_blank">ORDER NOW</a>
+</div>
+</div>
 
-        <p>
-            Premium Style. Best Quality. Great Prices.
-        </p>
-
-        <a href="#products" class="btn btn-gold">
-            🛍 SHOP NOW
-        </a>
-
-        <a href="https://wa.me/923181337165"
-           target="_blank"
-           class="btn btn-dark">
-           💬 ORDER ON WHATSAPP
-        </a>
-
-    </div>
-
+</div>
 </section>
 
-<!-- FEATURES -->
-<section class="features">
+<footer id="contact">
+<h2>VIP MEN'S FASHION</h2>
+<p>Premium Style • Quality Products • Free Delivery</p>
+<p style="margin-top:12px;">
+WhatsApp:
+<a href="https://wa.me/923181337165" target="_blank">
+0318-1337165
+</a>
+</p>
+</footer>
 
-    <div class="feature">
-        <div class="feature-icon">🚚</div>
-        <h3>FREE DELIVERY</h3>
-        <p>All Over Pakistan</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🛡</div>
-        <h3>100% ORIGINAL</h3>
-        <p>Premium Quality</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">↩</div>
-        <h3>EASY RETURNS</h3>
-        <p>7 Days Return</p>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">☎</div>
-        <h3>SUPPORT</h3>
-        <p>We're Here To Help</p>
-    </div>
-
-</section>
-
-<!-- PRODUCTS -->
-<section class="section" id="products">
-
-    <div class="section-title">
-        <h2>👑 OUR PREMIUM COLLECTION</h2>
-        <p>20+ Stylish Products For Men</p>
-    </div>
-
-    <!-- SEARCH -->
-    <div class="search-box">
-        <input
-            type="text"
-            id="search"
-            placeholder="Search products..."
-            onkeyup="searchProducts()">
-        <button>🔍</button>
-    </div>
-
-    <!-- FILTERS -->
-    <div class="filters">
-
-        <button class="filter active"
-                onclick="filterProducts('all',this)">
-            ALL
-        </button>
-
-        <button class="filter"
-                onclick="filterProducts('tshirt',this)">
-            T-SHIRTS
-        </button>
-
-        <button class="filter"
-                onclick="filterProducts('jacket',this)">
-            JACKETS
-        </button>
-
-        <button class="filter"
-                onclick="filterProducts('shoes',this)">
-            SHOES
-        </button>
-
-        <button class="filter"
-                onclick="filterProducts('jogger',this)">
-            JOGGERS
-        </button>
-
-        <button class="filter"
-                onclick="filterProducts('hoodie',this)">
-            HOODIES
-        </button>
-
-    </div>
-
-    <div class="products" id="productGrid">
-
-        <!-- 1 -->
-        <div class="product" data-category="tshirt">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
-            alt="Premium White T-Shirt">
-            <div class="product-info">
-                <span class="tag">T-SHIRT</span>
-                <h3>Premium White T-Shirt</h3>
-                <p>Luxury cotton men's T-shirt.</p>
-                <div class="price">Rs. 1,999</div>
-                <button class="order" onclick="order('Premium White T-Shirt','1,999')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 2 -->
-        <div class="product" data-category="tshirt">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85"
-            alt="Black Classic T-Shirt">
-            <div class="product-info">
-                <span class="tag">T-SHIRT</span>
-                <h3>Black Classic T-Shirt</h3>
-                <p>Premium men's everyday wear.</p>
-                <div class="price">Rs. 2,199</div>
-                <button class="order" onclick="order('Black Classic T-Shirt','2,199')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 3 -->
-        <div class="product" data-category="tshirt">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=700&q=85"
-            alt="Olive Green T-Shirt">
-            <div class="product-info">
-                <span class="tag">T-SHIRT</span>
-                <h3>Olive Green T-Shirt</h3>
-                <p>Modern premium collection.</p>
-                <div class="price">Rs. 2,299</div>
-                <button class="order" onclick="order('Olive Green T-Shirt','2,299')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="product" data-category="tshirt">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=700&q=85"
-            alt="Premium Polo">
-            <div class="product-info">
-                <span class="tag">POLO</span>
-                <h3>Premium Polo Shirt</h3>
-                <p>Smart men's premium polo.</p>
-                <div class="price">Rs. 2,699</div>
-                <button class="order" onclick="order('Premium Polo Shirt','2,699')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="product" data-category="jacket">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85"
-            alt="Denim Jacket">
-            <div class="product-info">
-                <span class="tag">JACKET</span>
-                <h3>Premium Denim Jacket</h3>
-                <p>Stylish denim men's jacket.</p>
-                <div class="price">Rs. 4,999</div>
-                <button class="order" onclick="order('Premium Denim Jacket','4,999')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="product" data-category="jacket">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1520975958225-74f3e5e2f5d8?auto=format&fit=crop&w=700&q=85"
-            alt="Black Leather Jacket">
-            <div class="product-info">
-                <span class="tag">JACKET</span>
-                <h3>Black Leather Jacket</h3>
-                <p>Premium classic leather style.</p>
-                <div class="price">Rs. 7,999</div>
-                <button class="order" onclick="order('Black Leather Jacket','7,999')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 7 -->
-        <div class="product" data-category="hoodie">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=85"
-            alt="Premium Hoodie">
-            <div class="product-info">
-                <span class="tag">HOODIE</span>
-                <h3>Premium Hoodie</h3>
-                <p>Comfortable winter collection.</p>
-                <div class="price">Rs. 3,499</div>
-                <button class="order" onclick="order('Premium Hoodie','3,499')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 8 -->
-        <div class="product" data-category="jacket">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?auto=format&fit=crop&w=700&q=85"
-            alt="Bomber Jacket">
-            <div class="product-info">
-                <span class="tag">JACKET</span>
-                <h3>Classic Bomber Jacket</h3>
-                <p>Modern premium men's jacket.</p>
-                <div class="price">Rs. 5,499</div>
-                <button class="order" onclick="order('Classic Bomber Jacket','5,499')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 9 -->
-        <div class="product" data-category="shoes">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"
-            alt="Sport Shoes">
-            <div class="product-info">
-                <span class="tag">SHOES</span>
-                <h3>Premium Sport Shoes</h3>
-                <p>Comfortable daily sneakers.</p>
-                <div class="price">Rs. 4,999</div>
-                <button class="order" onclick="order('Premium Sport Shoes','4,999')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 10 -->
-        <div class="product" data-category="shoes">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=85"
-            alt="White Sneakers">
-            <div class="product-info">
-                <span class="tag">SHOES</span>
-                <h3>Classic White Sneakers</h3>
-                <p>Clean premium sneaker design.</p>
-                <div class="price">Rs. 4,499</div>
-                <button class="order" onclick="order('Classic White Sneakers','4,499')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 11 -->
-        <div class="product" data-category="shoes">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=700&q=85"
-            alt="Running Shoes">
-            <div class="product-info">
-                <span class="tag">SHOES</span>
-                <h3>Premium Running Shoes</h3>
-                <p>Lightweight athletic shoes.</p>
-                <div class="price">Rs. 5,499</div>
-                <button class="order" onclick="order('Premium Running Shoes','5,499')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 12 -->
-        <div class="product" data-category="shoes">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=700&q=85"
-            alt="Canvas Sneakers">
-            <div class="product-info">
-                <span class="tag">SHOES</span>
-                <h3>Canvas Sneakers</h3>
-                <p>Casual everyday sneakers.</p>
-                <div class="price">Rs. 3,999</div>
-                <button class="order" onclick="order('Canvas Sneakers','3,999')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 13 -->
-        <div class="product" data-category="jogger">
-            <img class="product-img"
-            src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=700&q=85"
-            alt="Black Joggers">
-            <div class="product-info">
-                <span class="tag">JOGGERS</span>
-                <h3>Black Premium Joggers</h3>
-                <p>Comfortable men's joggers.</p>
-                <div class="price">Rs. 2,999</div>
-                <button class="order" onclick="order('Black Premium Joggers','2,999')">
-                    ORDER NOW 💬
-                </button>
-            </div>
-        </div>
-
-        <!-- 14 -->
-        <div class="product" data-category="jogger">
-            <img class="prod
-
-        
-                            
+</body>
+    </html>
