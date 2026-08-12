@@ -1,407 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>UrbanCart | Premium Online Store</title>
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>My Online Shop | Premium Men's Fashion</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#f6f7fb;
-    color:#172033;
-}
-
-/* HEADER */
-header{
-    background:#111827;
-    color:white;
-    padding:18px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:#3b82f6;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-weight:600;
-}
-
-/* HERO */
-.hero{
-    min-height:520px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:50px 20px;
-    background:linear-gradient(135deg,#111827,#2563eb);
-    color:white;
-}
-
-.hero h1{
-    font-size:52px;
-    margin-bottom:18px;
-}
-
-.hero p{
-    font-size:20px;
-    color:#e5e7eb;
-    margin-bottom:30px;
-}
-
-.hero-btn{
-    display:inline-block;
-    background:white;
-    color:#1d4ed8;
-    padding:15px 30px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* SECTION */
-section{
-    padding:70px 7%;
-}
-
-.section-title{
-    text-align:center;
-    font-size:35px;
-    margin-bottom:45px;
-}
-
-/* PRODUCTS */
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-}
-
-.card img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
-}
-
-.card h3{
-    font-size:20px;
-    margin-bottom:8px;
-}
-
-.price{
-    font-size:21px;
-    font-weight:bold;
-    margin:12px 0;
-}
-
-.order-btn{
-    display:block;
-    text-align:center;
-    background:#16a34a;
-    color:white;
-    padding:12px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* FEATURES */
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    text-align:center;
-}
-
-.feature{
-    background:white;
-    padding:30px 20px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-
-.feature-icon{
-    font-size:35px;
-    margin-bottom:12px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#16a34a;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    z-index:999;
-}
-
-/* FOOTER */
-footer{
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:35px 20px;
-}
-
-footer p{
-    margin:8px;
-    color:#cbd5e1;
-}
-
-@media(max-width:600px){
-
-.hero h1{
-    font-size:36px;
-}
-
-nav a{
-    margin-left:10px;
-    font-size:14px;
-}
-
-section{
-    padding:50px 5%;
-}
-
-}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#14213d}
+header{background:linear-gradient(110deg,#061b4f,#075fe5);color:#fff;padding:14px 3%;display:flex;align-items:center;gap:25px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;min-width:290px}.logo-icon{font-size:38px}.logo h1{margin:0;font-size:27px}.logo small{opacity:.9}
+.search{flex:1;min-width:210px;max-width:390px}.search input{width:100%;padding:13px 18px;border:0;border-radius:28px;outline:0}
+.top{display:flex;align-items:center;gap:12px;font-weight:bold}.wa-top,.wa{background:#16b94a;color:#fff!important;text-decoration:none;border-radius:7px;font-weight:bold}
+.wa-top{padding:10px 16px}nav{background:#fff;display:flex;justify-content:center;gap:45px;padding:12px;box-shadow:0 2px 8px #0001}nav a{color:#14213d;text-decoration:none;font-weight:bold}
+.hero{margin:18px auto;max-width:980px;min-height:280px;border-radius:15px;overflow:hidden;background:linear-gradient(110deg,#071b4d,#0873ed);color:#fff;display:flex;align-items:center;position:relative}
+.hero-text{padding:35px 45px;z-index:2;max-width:68%}.hero h2{font-size:35px;margin:0 0 12px}.hero p{font-size:17px}.buttons{display:flex;gap:14px;margin:20px 0;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;background:#fff;color:#1261d9;text-decoration:none;font-weight:bold}.green{background:#16b94a!important;color:#fff!important}
+.hero img{position:absolute;right:6%;bottom:0;height:100%;width:270px;object-fit:cover}.features{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;font-weight:bold}.features span{background:#ffffff20;padding:7px 9px;border-radius:7px}
+main{max-width:1000px;margin:auto;padding:0 14px}.section-title{text-align:center;font-size:25px;margin:22px 0}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.product-card{background:#fff;border-radius:11px;overflow:hidden;box-shadow:0 4px 14px #12244d18}.product-card>img{width:100%;height:120px;object-fit:cover;display:block}
+.card-body{padding:9px}.card-body h3{font-size:13px;margin:0 0 7px}.card-body p{font-size:11px;color:#667085;height:28px;margin:0 0 6px}.card-body strong{color:#0764df;font-size:16px}
+.actions{display:flex;gap:5px;margin-top:8px}button,.wa{border:0;padding:8px 5px;font-size:10px;cursor:pointer;flex:1;text-align:center}button{background:#1267df;color:white;border-radius:6px}.wa{border-radius:6px}
+.cart{margin:20px 0;background:#fff;border-radius:10px;padding:18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px #0001}.cart h2{margin:0;font-size:18px}#cart-items{color:#667085;margin:5px 0}
+footer{background:#061b4f;color:#fff;margin-top:20px;padding:25px 5%}.footer-grid{max-width:980px;margin:auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}footer a{color:#fff;text-decoration:none;display:block;margin:5px 0}
+@media(max-width:800px){.grid{grid-template-columns:repeat(3,1fr)}.hero img{opacity:.35;right:0}.hero-text{max-width:100%}}
+@media(max-width:560px){.logo{min-width:100%}nav{gap:18px;font-size:13px}.grid{grid-template-columns:repeat(2,1fr)}.hero{min-height:330px}.hero-text{padding:25px}.hero h2{font-size:28px}.hero img{height:75%;width:190px}.footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
-
 <body>
-
 <header>
-    <div class="logo">Urban<span>Cart</span></div>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Shop</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="logo"><div class="logo-icon">🛍️</div><div><h1>My Online Shop</h1><small>Quality Products • Best Prices • Easy Ordering</small></div></div>
+<div class="search"><input id="search" placeholder="Search products..." oninput="searchProducts()"></div>
+<div class="top"><a class="wa-top" href="https://wa.me/923181337165">💬 Order on WhatsApp</a><span>0318-1337165</span><span>🛒 Cart <b id="count">0</b></span></div>
 </header>
-
-
-<!-- HERO -->
-<div class="hero" id="home">
-    <div>
-        <h1>Upgrade Your Style</h1>
-        <p>Premium fashion. Great prices. Easy ordering.</p>
-
-        <a href="#products" class="hero-btn">
-            SHOP COLLECTION
-        </a>
-    </div>
-</div>
-
-
-<!-- PRODUCTS -->
-<section id="products">
-
-<h2 class="section-title">Featured Collection</h2>
-
-<div class="products">
-
-<!-- SHIRT 1 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80">
-
-<div class="card-content">
-<h3>Premium White T-Shirt</h3>
-<p>Classic premium cotton shirt.</p>
-<div class="price">Rs. 1,500</div>
-
-<a class="order-btn"
-href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20Premium%20White%20T-Shirt">
-Order on WhatsApp
-</a>
-</div>
-</div>
-
-
-<!-- SHIRT 2 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=700&q=80">
-
-<div class="card-content">
-<h3>Premium Black T-Shirt</h3>
-<p>Modern everyday fashion.</p>
-<div class="price">Rs. 1,700</div>
-
-<a class="order-btn"
-href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20Premium%20Black%20T-Shirt">
-Order on WhatsApp
-</a>
-</div>
-</div>
-
-
-<!-- SHIRT 3 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=700&q=80">
-
-<div class="card-content">
-<h3>Classic Casual Shirt</h3>
-<p>Smart look for every occasion.</p>
-<div class="price">Rs. 2,200</div>
-
-<a class="order-btn"
-href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20Classic%20Casual%20Shirt">
-Order on WhatsApp
-</a>
-</div>
-</div>
-
-
-<!-- SHOES 1 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80">
-
-<div class="card-content">
-<h3>Premium Red Sneakers</h3>
-<p>Comfortable everyday sneakers.</p>
-<div class="price">Rs. 3,000</div>
-
-<a class="order-btn"
-href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20Premium%20Red%20Sneakers">
-Order on WhatsApp
-</a>
-</div>
-</div>
-
-
-<!-- SHOES 2 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=80">
-
-<div class="card-content">
-<h3>Classic Sneakers</h3>
-<p>Stylish shoes with premium comfort.</p>
-<div class="price">Rs. 3,500</div>
-
-<a class="order-btn"
-href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20Classic%20Sneakers">
-Order on WhatsApp
-</a>
-</div>
-</div>
-
-
-<!-- SHOES 3 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=700&q=80">
-
-<div class="card-content">
-<h3>Urban Sports Shoes</h3>
-<p>Sporty design with modern style.</p>
-<div class="price">Rs. 4,000</div>
-
-<a class="order-btn"
-href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20order%20Urban%20Sports%20Shoes">
-Order on WhatsApp
-</a>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- FEATURES -->
-<section>
-
-<h2 class="section-title">Why Shop With Us?</h2>
-
-<div class="features">
-
-<div class="feature">
-<div class="feature-icon">🚚</div>
-<h3>Fast Delivery</h3>
-<p>Quick and reliable delivery.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">🔒</div>
-<h3>Secure Ordering</h3>
-<p>Simple and safe ordering process.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">⭐</div>
-<h3>Quality Products</h3>
-<p>Selected products at great prices.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">💬</div>
-<h3>WhatsApp Support</h3>
-<p>Contact us directly for orders.</p>
-</div>
-
-</div>
-</section>
-
-
-<!-- FOOTER -->
-<footer id="contact">
-
-<h2>UrbanCart</h2>
-
-<p>Premium Products • Great Prices • Easy Ordering</p>
-
-<p>WhatsApp: 0318-1337165</p>
-
-<p>© 2026 UrbanCart. All Rights Reserved.</p>
-
-</footer>
-
-
-<!-- FLOATING WHATSAPP -->
-<a class="whatsapp"
-href="https://wa.me/923181337165?text=Hello%20I%20want%20to%20place%20an%20order">
-💬 WhatsApp Order
-</a>
-
-</body>
-</html>
+<nav><a href="#">⌂ Home</a><a href="#products">▦ Products</a><a href="#cart">🛒 Cart</a><a href="#contact">☎ Contact</a></nav>
+<section class="hero"><div class="hero-text">
+<h2>Premium Men's<br>Fashion Collection</h2><p>Quality Products • Best Prices • Free Delivery</p>
+<div class="buttons"><a class="btn" href="#products">🛒 Shop Now</a><a class="btn green" href="https://wa.me/923181337165">💬 Order on WhatsApp</a></div>
+<div class="features"><span>⚙ Best Quality</span><span>🚚 Free Delivery</span><span>↻ Easy Returns</span><span>🔒 Secure Payment</span></div>
+</div><img src="images/hero-model.jpg" alt="Men's fashion model"></section>
+<main id="products"><h2 class="section-title">Our Premium Collection</h2>
+<div class="grid" id="productGrid"><article class="product-card" data-name="premium white t-shirt">
+<img src="images/product-1.jpg" alt="Premium White T-Shirt">
+<div class="card-body"><h3>Premium White T-Shirt</h3><p>Premium cotton men's t-shirt</p><strong>Rs. 1,500</strong>
+<div class="actions"><button onclick="addToCart('Premium White T-Shirt',1500)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Premium%20White%20T-Shirt">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="classic black t-shirt">
+<img src="images/product-2.jpg" alt="Classic Black T-Shirt">
+<div class="card-body"><h3>Classic Black T-Shirt</h3><p>Stylish premium black t-shirt</p><strong>Rs. 1,800</strong>
+<div class="actions"><button onclick="addToCart('Classic Black T-Shirt',1800)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Classic%20Black%20T-Shirt">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="olive t-shirt">
+<img src="images/product-3.jpg" alt="Olive T-Shirt">
+<div class="card-body"><h3>Olive T-Shirt</h3><p>Modern men's fashion</p><strong>Rs. 1,700</strong>
+<div class="actions"><button onclick="addToCart('Olive T-Shirt',1700)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Olive%20T-Shirt">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="premium polo shirt">
+<img src="images/product-4.jpg" alt="Premium Polo Shirt">
+<div class="card-body"><h3>Premium Polo Shirt</h3><p>Classic men's polo shirt</p><strong>Rs. 2,200</strong>
+<div class="actions"><button onclick="addToCart('Premium Polo Shirt',2200)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Premium%20Polo%20Shirt">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men casual shirt">
+<img src="images/product-5.jpg" alt="Men Casual Shirt">
+<div class="card-body"><h3>Men Casual Shirt</h3><p>Premium casual shirt</p><strong>Rs. 2,000</strong>
+<div class="actions"><button onclick="addToCart('Men Casual Shirt',2000)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Casual%20Shirt">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men formal shirt">
+<img src="images/product-6.jpg" alt="Men Formal Shirt">
+<div class="card-body"><h3>Men Formal Shirt</h3><p>Elegant formal shirt</p><strong>Rs. 2,500</strong>
+<div class="actions"><button onclick="addToCart('Men Formal Shirt',2500)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Formal%20Shirt">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men denim jacket">
+<img src="images/product-7.jpg" alt="Men Denim Jacket">
+<div class="card-body"><h3>Men Denim Jacket</h3><p>Premium denim jacket</p><strong>Rs. 3,500</strong>
+<div class="actions"><button onclick="addToCart('Men Denim Jacket',3500)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Denim%20Jacket">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men hoodie">
+<img src="images/product-8.jpg" alt="Men Hoodie">
+<div class="card-body"><h3>Men Hoodie</h3><p>Comfortable premium hoodie</p><strong>Rs. 2,800</strong>
+<div class="actions"><button onclick="addToCart('Men Hoodie',2800)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Hoodie">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="sport running shoes">
+<img src="images/product-9.jpg" alt="Sport Running Shoes">
+<div class="card-body"><h3>Sport Running Shoes</h3><p>Comfortable running shoes</p><strong>Rs. 3,500</strong>
+<div class="actions"><button onclick="addToCart('Sport Running Shoes',3500)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Sport%20Running%20Shoes">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="premium white sneakers">
+<img src="images/product-10.jpg" alt="Premium White Sneakers">
+<div class="card-body"><h3>Premium White Sneakers</h3><p>Premium white sneakers</p><strong>Rs. 4,500</strong>
+<div class="actions"><button onclick="addToCart('Premium White Sneakers',4500)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Premium%20White%20Sneakers">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="classic casual shoes">
+<img src="images/product-11.jpg" alt="Classic Casual Shoes">
+<div class="card-body"><h3>Classic Casual Shoes</h3><p>Premium casual shoes</p><strong>Rs. 3,800</strong>
+<div class="actions"><button onclick="addToCart('Classic Casual Shoes',3800)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Classic%20Casual%20Shoes">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men canvas shoes">
+<img src="images/product-12.jpg" alt="Men Canvas Shoes">
+<div class="card-body"><h3>Men Canvas Shoes</h3><p>Classic canvas shoes</p><strong>Rs. 3,200</strong>
+<div class="actions"><button onclick="addToCart('Men Canvas Shoes',3200)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Canvas%20Shoes">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men sport shoes">
+<img src="images/product-13.jpg" alt="Men Sport Shoes">
+<div class="card-body"><h3>Men Sport Shoes</h3><p>Comfort sport shoes</p><strong>Rs. 3,900</strong>
+<div class="actions"><button onclick="addToCart('Men Sport Shoes',3900)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Sport%20Shoes">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men lifestyle sneakers">
+<img src="images/product-14.jpg" alt="Men Lifestyle Sneakers">
+<div class="card-body"><h3>Men Lifestyle Sneakers</h3><p>Modern lifestyle sneakers</p><strong>Rs. 4,000</strong>
+<div class="actions"><button onclick="addToCart('Men Lifestyle Sneakers',4000)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Lifestyle%20Sneakers">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="black joggers">
+<img src="images/product-15.jpg" alt="Black Joggers">
+<div class="card-body"><h3>Black Joggers</h3><p>Comfortable black joggers</p><strong>Rs. 2,500</strong>
+<div class="actions"><button onclick="addToCart('Black Joggers',2500)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Black%20Joggers">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="grey joggers">
+<img src="images/product-16.jpg" alt="Grey Joggers">
+<div class="card-body"><h3>Grey Joggers</h3><p>Soft comfortable joggers</p><strong>Rs. 2,700</strong>
+<div class="actions"><button onclick="addToCart('Grey Joggers',2700)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Grey%20Joggers">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="navy joggers">
+<img src="images/product-17.jpg" alt="Navy Joggers">
+<div class="card-body"><h3>Navy Joggers</h3><p>Premium navy joggers</p><strong>Rs. 2,600</strong>
+<div class="actions"><button onclick="addToCart('Navy Joggers',2600)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Navy%20Joggers">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men fashion outfit">
+<img src="images/product-18.jpg" alt="Men Fashion Outfit">
+<div class="card-body"><h3>Men Fashion Outfit</h3><p>Complete fashion look</p><strong>Rs. 3,000</strong>
+<div class="actions"><button onclick="addToCart('Men Fashion Outfit',3000)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Fashion%20Outfit">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men streetwear">
+<img src="images/product-19.jpg" alt="Men Streetwear">
+<div class="card-body"><h3>Men Streetwear</h3><p>Modern streetwear style</p><strong>Rs. 2,900</strong>
+<div class="actions"><button onclick="addToCart('Men Streetwear',2900)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Streetwear">WhatsApp</a></div></div></article>
+<article class="product-card" data-name="men premium collection">
+<img src="images/product-20.jpg" alt="Men Premium Collection">
+<div class="card-body"><h3>Men Premium Collection</h3><p>Exclusive premium collection</p><strong>Rs. 3,500</strong>
+<div class="actions"><button onclick="addToCart('Men Premium Collection',3500)">Add to Cart</button>
+<a class="wa" href="https://wa.me/923181337165?text=I%20want%20to%20order%20Men%20Premium%20Collection">WhatsApp</a></div></div></article></div>
+<div class="cart" id="cart"><div><h2>🛒 Your Shopping Cart</h2><div id="cart-items">Your cart is empty.</div><b>Total: Rs. <span id="total">0</span></b></div>
+<a class="btn green" href="https://wa.me/923181337165">💬 Order on WhatsApp</a></div></main>
+<footer id="contact"><div class="footer-grid">
+<div><h3>Contact Us</h3><p>Order directly through WhatsApp</p><h2>0318-1337165</h2></div>
+<div><h3>Quick Links</h3><a href="#">Home</a><a href="#products">Products</a><a href="#cart">Cart</a><a href="#contact">Contact</a></div>
+<div><h3>Why Choose Us?</h3><p>🚚 Free Delivery Across Pakistan</p><p>⭐ Best Quality</p><p>↻ Easy Returns</p><p>🔒 Secure Payment</p></div>
+</div><p style="text-align:center">© 2026 My Online Shop. All Rights Reserved.</p></footer>
+<script>
+let cart=[],total=0;
+function addToCart(name,price){cart.push(name);total+=price;document.getElementById("count").textContent=cart.length;document.getElementById("total").textContent=total.toLocaleString();document.getElementById("cart-items").textContent=cart.join(", ");}
+function searchProducts(){let q=document.getElementById("search").value.toLowerCase();document.querySelectorAll(".product-card").forEach(c=>c.style.display=c.dataset.name.includes(q)?"block":"none");}
+</script>
+</body></html>
