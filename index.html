@@ -2,205 +2,644 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>VIP Men's Fashion</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f3f3f3;color:#111}
-header{background:#080808;color:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
-.logo{font-size:28px;font-weight:bold;letter-spacing:1px}
-.logo span{color:#d4af37}
-nav a{color:white;text-decoration:none;margin:0 12px}
-.hero{
-height:420px;
-display:flex;
-align-items:center;
-padding:50px 7%;
-color:white;
-background:linear-gradient(90deg,#000b,transparent),
-url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=90") center/cover;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-.hero h1{font-size:52px;margin-bottom:15px}
-.hero p{font-size:19px;margin-bottom:25px}
-.btn{display:inline-block;background:#d4af37;color:#111;padding:14px 25px;border-radius:5px;text-decoration:none;font-weight:bold}
-.title{text-align:center;font-size:32px;margin:40px 0 25px}
-.products{max-width:1250px;margin:auto;padding:0 18px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 5px 20px #0002;transition:.25s}
-.card:hover{transform:translateY(-6px)}
-.card img{width:100%;height:280px;object-fit:cover;display:block}
-.info{padding:16px}
-.info h3{margin-bottom:8px}
-.info p{color:#777;font-size:14px;margin-bottom:10px}
-.price{font-size:21px;font-weight:bold;color:#b08b16;margin-bottom:13px}
-.order{display:block;text-align:center;background:#111;color:white;padding:11px;border-radius:5px;text-decoration:none}
-footer{margin-top:50px;background:#080808;color:white;text-align:center;padding:35px}
-footer p{margin:8px}
-@media(max-width:900px){.products{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:650px){
-.hero{height:350px;padding:30px 22px}
-.hero h1{font-size:36px}
-.products{grid-template-columns:repeat(2,1fr);gap:12px}
-.card img{height:220px}
-nav{width:100%}
-nav a{margin:5px}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#0b0b0b;
+    color:white;
+}
+
+.topbar{
+    background:#111;
+    border-bottom:1px solid #c99a3e;
+    padding:10px 5%;
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+}
+
+.navbar{
+    background:#101010;
+    padding:15px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #c99a3e;
+    gap:20px;
+}
+
+.logo{
+    font-size:38px;
+    font-weight:900;
+    color:#d9aa4b;
+}
+
+.logo small{
+    display:block;
+    font-size:9px;
+    color:white;
+    letter-spacing:3px;
+    text-align:center;
+}
+
+.search{
+    flex:1;
+    max-width:500px;
+    padding:13px 20px;
+    border-radius:30px;
+    border:none;
+    outline:none;
+}
+
+.navlinks a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:14px;
+}
+
+.whatsapp{
+    background:#d9aa4b;
+    color:#111;
+    padding:13px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    min-height:390px;
+    display:flex;
+    align-items:center;
+    padding:50px 6%;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1;
+    max-width:650px;
+}
+
+.gold{
+    color:#d9aa4b;
+}
+
+.hero p{
+    font-size:20px;
+    margin:20px 0;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#d9aa4b;
+    color:#111;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:25px 6%;
+    background:#151515;
+    border-bottom:1px solid #9d762d;
+    text-align:center;
+}
+
+.feature{
+    border-right:1px solid #555;
+}
+
+.feature:last-child{
+    border:none;
+}
+
+.feature b{
+    color:#d9aa4b;
+    display:block;
+    margin-bottom:5px;
+}
+
+.title{
+    text-align:center;
+    padding:45px 10px 25px;
+}
+
+.title h2{
+    font-size:32px;
+}
+
+.title span{
+    color:#d9aa4b;
+}
+
+.products{
+    width:94%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.card{
+    background:#161616;
+    border:1px solid #705321;
+    border-radius:6px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#d9aa4b;
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-body{
+    padding:13px;
+}
+
+.card h3{
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.price{
+    color:#d9aa4b;
+    font-size:18px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.order{
+    display:block;
+    text-align:center;
+    background:#d9aa4b;
+    color:#111;
+    padding:10px;
+    text-decoration:none;
+    border-radius:4px;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.footer{
+    margin-top:50px;
+    background:#111;
+    border-top:1px solid #705321;
+    padding:45px 6%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.footer h3{
+    color:#d9aa4b;
+    margin-bottom:15px;
+}
+
+.footer p,.footer a{
+    color:#aaa;
+    display:block;
+    margin:7px 0;
+    text-decoration:none;
+}
+
+.copy{
+    text-align:center;
+    background:#080808;
+    padding:15px;
+    color:#777;
+}
+
+@media(max-width:900px){
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .feature{
+        border:none;
+    }
+
+    .navlinks{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+}
+
+@media(max-width:500px){
+    .topbar{
+        font-size:10px;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+    }
+
+    .search{
+        order:3;
+        flex-basis:100%;
+    }
+
+    .products{
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+    }
+
+    .card img{
+        height:180px;
+    }
+
+    .card-body{
+        padding:9px;
+    }
+
+    .card h3{
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:330px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .footer{
+        grid-template-columns:1fr 1fr;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">VIP <span>MEN'S</span></div>
-<nav>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-<a href="#contact">Contact</a>
+<div class="topbar">
+    <span>🔥 VIP COLLECTION • PREMIUM QUALITY</span>
+    <span>🚚 FREE DELIVERY ALL OVER PAKISTAN</span>
+    <span>📱 0318-1337165</span>
+</div>
+
+<nav class="navbar">
+
+    <div class="logo">
+        VIP
+        <small>MEN'S FASHION</small>
+    </div>
+
+    <input class="search" type="text"
+    placeholder="Search products...">
+
+    <div class="navlinks">
+        <a href="#">HOME</a>
+        <a href="#products">COLLECTION</a>
+        <a href="#products">T-SHIRTS</a>
+        <a href="#products">JACKETS</a>
+        <a href="#products">SHOES</a>
+    </div>
+
+    <a class="whatsapp"
+       href="https://wa.me/923181337165"
+       target="_blank">
+       ORDER ON WHATSAPP
+    </a>
+
 </nav>
-<a class="btn" href="https://wa.me/923181337165" target="_blank">WhatsApp</a>
-</header>
 
 <section class="hero">
-<div>
-<h1>VIP Men's<br>Fashion</h1>
-<p>Premium Style • Best Quality • Free Delivery</p>
-<a class="btn" href="#products">SHOP NOW</a>
-</div>
+
+    <div>
+        <p class="gold">NEW ARRIVALS</p>
+
+        <h1>
+            VIP MEN'S<br>
+            <span class="gold">FASHION</span>
+        </h1>
+
+        <p>
+            Premium Quality • Latest Style • Best Prices
+        </p>
+
+        <a href="#products" class="btn">
+            SHOP NOW →
+        </a>
+    </div>
+
 </section>
 
-<h2 class="title" id="products">Premium Collection</h2>
+<section class="features">
 
-<div class="products">
+    <div class="feature">
+        🚚
+        <b>FREE DELIVERY</b>
+        All Over Pakistan
+    </div>
+
+    <div class="feature">
+        👑
+        <b>PREMIUM QUALITY</b>
+        Quality Products
+    </div>
+
+    <div class="feature">
+        ↩️
+        <b>EASY RETURNS</b>
+        7 Days Return
+    </div>
+
+    <div class="feature">
+        📞
+        <b>24/7 SUPPORT</b>
+        WhatsApp Support
+    </div>
+
+</section>
+
+<div class="title">
+    <h2>FEATURED <span>COLLECTION</span></h2>
+    <p>20 Premium Men's Products</p>
+</div>
+
+<section class="products" id="products">
 
 <!-- 1 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Premium White T-Shirt</h3><p>Luxury Cotton</p><div class="price">Rs. 1,999</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20White%20T-Shirt">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Premium White T-Shirt</h3>
+<div class="price">Rs. 1,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20White%20T-Shirt" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 2 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Black Classic T-Shirt</h3><p>Premium Men's Wear</p><div class="price">Rs. 2,199</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Black%20Classic%20T-Shirt">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Classic Black T-Shirt</h3>
+<div class="price">Rs. 2,199</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Classic%20Black%20T-Shirt" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 3 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Olive T-Shirt</h3><p>Modern Collection</p><div class="price">Rs. 2,299</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Olive%20T-Shirt">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Olive Green T-Shirt</h3>
+<div class="price">Rs. 2,299</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Olive%20Green%20T-Shirt" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 4 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Casual Shirt</h3><p>VIP Collection</p><div class="price">Rs. 2,499</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Casual%20Shirt">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Casual Shirt</h3>
+<div class="price">Rs. 2,499</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Casual%20Shirt" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 5 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Premium Denim Jacket</h3><p>Luxury Denim</p><div class="price">Rs. 4,999</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Denim%20Jacket">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Denim Jacket</h3>
+<div class="price">Rs. 4,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Denim%20Jacket" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 6 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1520975958225-2c1b4b3c7b0f?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Black Leather Jacket</h3><p>Premium Style</p><div class="price">Rs. 7,999</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Leather%20Jacket">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Leather Jacket</h3>
+<div class="price">Rs. 7,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Leather%20Jacket" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 7 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Premium Hoodie</h3><p>Winter Collection</p><div class="price">Rs. 3,499</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20Hoodie">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Premium Hoodie</h3>
+<div class="price">Rs. 3,499</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20Hoodie" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 8 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>VIP Fashion Outfit</h3><p>Premium Look</p><div class="price">Rs. 5,999</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20VIP%20Fashion%20Outfit">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>VIP Fashion Outfit</h3>
+<div class="price">Rs. 5,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20VIP%20Fashion%20Outfit" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 9 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Premium Sport Shoes</h3><p>Comfort Collection</p><div class="price">Rs. 4,999</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Sport%20Shoes">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Sport Shoes</h3>
+<div class="price">Rs. 4,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Sport%20Shoes" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 10 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Classic Sneakers</h3><p>Premium Sneakers</p><div class="price">Rs. 4,499</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Classic%20Sneakers">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Classic Sneakers</h3>
+<div class="price">Rs. 4,499</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Classic%20Sneakers" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 11 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Running Shoes</h3><p>Sport Collection</p><div class="price">Rs. 5,499</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Running%20Shoes">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Running Shoes</h3>
+<div class="price">Rs. 5,499</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Running%20Shoes" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 12 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Canvas Sneakers</h3><p>Casual Style</p><div class="price">Rs. 3,999</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Canvas%20Sneakers">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Canvas Sneakers</h3>
+<div class="price">Rs. 3,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Canvas%20Sneakers" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 13 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Black Joggers</h3><p>Comfort Wear</p><div class="price">Rs. 2,999</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Black%20Joggers">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Black Joggers</h3>
+<div class="price">Rs. 2,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Black%20Joggers" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 14 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1580906853203-f493cea1c8d9?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Grey Joggers</h3><p>Premium Comfort</p><div class="price">Rs. 2,899</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Grey%20Joggers">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1506629905607-d9c297d1b7b3?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Grey Joggers</h3>
+<div class="price">Rs. 2,899</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Grey%20Joggers" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 15 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Navy Joggers</h3><p>VIP Sportswear</p><div class="price">Rs. 3,099</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Navy%20Joggers">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Navy Joggers</h3>
+<div class="price">Rs. 3,099</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Navy%20Joggers" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 16 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Premium Polo</h3><p>Classic Collection</p><div class="price">Rs. 2,699</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20Polo">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Premium Polo</h3>
+<div class="price">Rs. 2,699</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20Polo" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 17 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Black Hoodie</h3><p>Street Collection</p><div class="price">Rs. 3,299</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Black%20Hoodie">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Black Hoodie</h3>
+<div class="price">Rs. 3,299</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Black%20Hoodie" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 18 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Premium Cotton Tee</h3><p>VIP Basics</p><div class="price">Rs. 1,899</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20Cotton%20Tee">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Premium Cotton Tee</h3>
+<div class="price">Rs. 1,899</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Premium%20Cotton%20Tee" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 19 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>Luxury Black Tee</h3><p>Premium Fit</p><div class="price">Rs. 2,399</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20Luxury%20Black%20Tee">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1583743814966-8936f37f4678?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>Luxury Black Tee</h3>
+<div class="price">Rs. 2,399</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20Luxury%20Black%20Tee" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
 <!-- 20 -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=90">
-<div class="info"><h3>VIP Complete Look</h3><p>Exclusive Collection</p><div class="price">Rs. 6,999</div><a class="order" href="https://wa.me/923181337165?text=I%20want%20VIP%20Complete%20Look">ORDER NOW</a></div>
+<img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
+<h3>VIP Complete Look</h3>
+<div class="price">Rs. 6,999</div>
+<a class="order" href="https://wa.me/923181337165?text=I%20want%20VIP%20Complete%20Look" target="_blank">ORDER NOW ☎</a>
+</div>
 </div>
 
+</section>
+
+<footer class="footer">
+
+<div>
+<h3>VIP MEN'S FASHION</h3>
+<p>Premium men's clothing, shoes and accessories.</p>
+<p>Quality is our promise.</p>
 </div>
 
-<footer id="contact">
-<h2>VIP MEN'S FASHION</h2>
-<p>Premium Men's Clothing & Footwear</p>
-<p>📱 WhatsApp: 0318-1337165</p>
-<p>🚚 Free Delivery</p>
-<p>© 2026 VIP Men's Fashion</p>
+<div>
+<h3>QUICK LINKS</h3>
+<a href="#">Home</a>
+<a href="#products">Collection</a>
+<a href="#products">T-Shirts</a>
+<a href="#products">Jackets</a>
+<a href="#products">Shoes</a>
+</div>
+
+<div>
+<h3>CUSTOMER SERVICE</h3>
+<a href="#">My Orders</a>
+<a href="#">Returns</a>
+<a href="#">Shipping Info</a>
+<a href="#">Size Guide</a>
+<a href="#">Privacy Policy</a>
+</div>
+
+<div>
+<h3>CONTACT US</h3>
+<p>📱 0318-1337165</p>
+<p>🇵🇰 Pakistan</p>
+<p>🕘 Mon - Sun</p>
+
+<a class="whatsapp"
+href="https://wa.me/923181337165"
+target="_blank">
+WhatsApp Us
+</a>
+</div>
+
 </footer>
 
+<div class="copy">
+© 2026 VIP MEN'S FASHION • All Rights Reserved
+</div>
+
 </body>
-</html>
+  </html>
